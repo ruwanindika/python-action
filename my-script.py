@@ -8,10 +8,14 @@ def main():
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
 
+
+
     driver=webdriver.Chrome(options=options)
     driver.get('https://devops1.com.au/')
     # driver.maximize_window()
-
+    
+    toggle_link = driver.find_element(By.CSS_SELECTOR,'.nav-link.dropdown-toggle')
+    toggle_link.click()
     
     service_list = driver.find_element(By.CSS_SELECTOR,'.dropdown-menu.show')
     
