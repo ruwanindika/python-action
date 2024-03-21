@@ -14,15 +14,11 @@ def main():
     driver=webdriver.Chrome(options=options)
     driver.get('https://devops1.com.au/')
     # driver.maximize_window()
-    driver.maximize_window()
+
     
-    toggle_link = driver.find_element(By.CSS_SELECTOR,'.nav-link.dropdown-toggle')
-    ActionChains(driver).click(toggle_link).perform()
+    service_list = driver.find_element(By.XPATH,'//dev[@class="section-intro"].text')
     
-    service_list = driver.find_element(By.CSS_SELECTOR,'.dropdown-menu.show')
-    
-    for i in (service_list.text).splitlines():
-        print(i)
+    print(f"---->>>>> {service_list}")
         
     driver.close()
 
