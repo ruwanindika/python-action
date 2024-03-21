@@ -16,7 +16,7 @@ def main():
     # driver.maximize_window()
     
     toggle_link = driver.find_element(By.CSS_SELECTOR,'.nav-link.dropdown-toggle')
-    ActionChains(context.driver).click(toggle_link).perform()
+    ActionChains(driver).click(toggle_link).perform()
     
     service_list = driver.find_element(By.CSS_SELECTOR,'.dropdown-menu.show')
     
