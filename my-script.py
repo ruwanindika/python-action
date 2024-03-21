@@ -16,7 +16,7 @@ def main():
     # driver.maximize_window()
 
     
-    service_list = driver.find_element(By.XPATH,'//dev[@class="section-intro"].text')
+    service_list = driver.find_element(By.XPATH,'//dev[@class="section-intro"]').text
     
     print(f"---->>>>> {service_list}")
         
