@@ -14,6 +14,7 @@ def main():
     driver=webdriver.Chrome(options=options)
     driver.get('https://devops1.com.au/')
     # driver.maximize_window()
+    driver.maximize_window()
     
     toggle_link = driver.find_element(By.CSS_SELECTOR,'.nav-link.dropdown-toggle')
     ActionChains(driver).click(toggle_link).perform()
