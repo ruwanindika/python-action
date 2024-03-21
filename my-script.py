@@ -1,5 +1,5 @@
 def main():
   print(f"---->>>>>> Hello CI/CD")
 
-if __main__ == "__main__":
+if __name__ == "__main__":
   main()
